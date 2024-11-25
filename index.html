@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tapping Game</title>
+
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/texts.css">
+    <link rel="stylesheet" href="styles/noises.css">
+
+    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/screen_container.css">
+
+</head>
+<body>
+    <div class="noise">
+        <div id="noise-lines"></div>
+        <div id="noise-snow"></div>
+    </div>
+    <div class="app">
+        <div class="screen-container game bg" id="game-screen">
+            <div class="hud">
+                <div class="test"></div>
+            </div>
+            <div class="players">
+                <div id="player-1" class="player">
+                    <img src="assets/ships/ship_1.svg" alt="">
+                </div>
+                <div id="player-2" class="player">
+                    <img src="assets/ships/ship_2.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="screens">
+            <div class="screen-container bg" id="start-screen" style="display: none">
+                <div class="title">
+                    <div class="text-3d title-text pink-text">
+                        <span>ALIEN</span>
+                        <span>ALIEN</span>
+                    </div>
+                    <div class="text-3d title-text green-text">
+                        <span>SHOOTER</span>
+                        <span>SHOOTER</span>
+                    </div>
+                </div>
+
+
+                <div class="restart-text grey-text info-text uppercase">
+                    Click anywhere to start
+                </div>
+
+                <div class="credit">
+                    by <a href="https://github.com/69Nesta">@69Nesta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/main.js" type="module"></script>
+</body>
+</html>

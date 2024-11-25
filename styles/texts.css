@@ -1,0 +1,124 @@
+
+.text-3d {
+    position: relative;
+
+}
+
+
+
+.title-text {
+    filter: blur(1px);
+}
+
+.title-text > span:nth-child(1), .title-text > span:nth-child(1) > span {
+    position: absolute;
+    z-index: 20;
+
+
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+
+
+
+    top: 0;
+    left: 0;
+}
+
+.title-text > span:nth-child(2), .title-text > span:nth-child(2) > span {
+    position: relative;
+    z-index: 10;
+
+    top: 14px;
+
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+
+
+}
+
+
+
+.subtitle {
+    filter: blur(1px);
+}
+
+.subtitle-text > span:nth-child(1), .subtitle-text > span:nth-child(1) > span {
+    position: absolute;
+    z-index: 20;
+
+    top: 0;
+    left: 0;
+
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.subtitle-text > span:nth-child(2), .subtitle-text > span:nth-child(2) > span {
+    position: relative;
+    z-index: 10;
+
+    top: 5px;
+
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+
+
+.info-text {
+    color: #C0C0C0;
+    text-shadow: 0 2px 44px rgba(255, 255, 255, 0.70), 0 2px 20px rgba(255, 255, 255, 0.60);
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.info-text > span {
+    color: #C0C0C0;
+}
+
+.credit, .credit > a {
+    color: #707070;
+
+    font-size: 16px;
+    letter-spacing: 0.32px;
+}
+
+.credit:hover, .credit:hover > a {
+    color: #9a9a9a;
+}
+
+
+.green-text > span:nth-child(1), .green-text > span:nth-child(1) > span  {
+    color: #9ae3b4;
+    text-shadow: 0 2px 44px #BDFF00, 0 2px 12px #8FFF00;
+}
+
+.green-text > span:nth-child(2), .green-text > span:nth-child(2) >  span {
+    color: #215F36;
+}
+
+
+
+.pink-text > span:nth-child(1), .pink-text > span:nth-child(1) > span {
+    color: #FFABBA;
+
+    text-shadow: 0 2px 44px #FF008A, 0 2px 12px #FF003D;
+
+}
+
+.pink-text > span:nth-child(2), .pink-text > span:nth-child(2) > span {
+    color: #FFABBA;
+
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}

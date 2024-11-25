@@ -1,0 +1,54 @@
+.screen-container {
+    z-index: 99;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.screen-container, .screen-container * {
+    cursor: auto;
+}
+
+.screen-container > .title {
+    position: absolute;
+
+    top: calc(100vh / 6 * 1.8);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.screen-container > .scores {
+    display: flex;
+    gap: 60px;
+}
+
+.screen-container > .restart-text {
+    position: absolute;
+
+    top: calc(100vh / 3 * 2.15);
+}
+
+.screen-container > .credit {
+    position: absolute;
+
+    bottom: 4vh;
+}
+
+.credit > a {
+    cursor: pointer;
+}

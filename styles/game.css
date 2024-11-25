@@ -1,0 +1,25 @@
+.game {
+
+}
+
+.players {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.player {
+    margin: 0 30px;
+}
+
+.hud {
+    position: absolute;
+    top: 0;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+
+    background: red;
+}
