@@ -10,16 +10,109 @@
 
 .player {
     margin: 0 30px;
+    height: 15vh;
+    width: 15vh;
 }
+
+.player > img {
+    position: absolute;
+    height: 15vh;
+    width: 15vh;
+
+    z-index: 2;
+}
+
+
+.munitions {
+    align-items: center;
+    display: flex;
+
+    height: 100%;
+
+}
+
+#player-1 > .munitions {
+    justify-content: end;
+}
+
+.bullet {
+    position: absolute;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    z-index: 1;
+
+    transition: transform ease-in-out 500ms;
+}
+
+.bullet-1 {
+    height: 40px;
+    width: 50px;
+
+    background-image: url('../assets/fires/fire_1.svg');
+}
+.bullet-2 {
+    height: 10px;
+    width: 20px;
+    background-image: url('../assets/fires/fire_2.svg');
+}
+
 
 .hud {
     position: absolute;
-    top: 0;
+    top: 20px;
 }
 
-.test {
-    width: 100px;
-    height: 100px;
+.health-bars {
+    display: flex;
+    gap: 40px;
+}
 
-    background: red;
+.health-bar {
+    width: fit-content;
+    display: flex;
+}
+
+
+.health-bar:nth-child(1) {
+    flex-direction: row-reverse;
+    border: 5px solid #2555E7;
+}
+
+.health-bar:nth-child(2) {
+    border: 5px solid #EE9027;
+}
+
+.health-bar:nth-child(1) > svg {
+    border-left: 5px solid #2555E7;
+}
+
+.health-bar:nth-child(2) > svg {
+    border-right: 5px solid #EE9027;
+}
+
+.bar-parent {
+    width: calc(300px - 65px);
+    padding: 5px;
+
+    display: flex;
+}
+
+.health-bar:nth-child(2) > .bar-parent {
+    flex-direction: row-reverse;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 100%;
+}
+
+
+.health-bar:nth-child(1) > .bar-parent > .progress-bar {
+    background: #5BC0F8;
+}
+
+.health-bar:nth-child(2) > .bar-parent > .progress-bar {
+    background: #FCEB77;
 }

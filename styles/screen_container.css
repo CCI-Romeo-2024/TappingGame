@@ -23,7 +23,7 @@
 .screen-container > .title {
     position: absolute;
 
-    top: calc(100vh / 6 * 1.8);
+    top: 6vh;
 
     display: flex;
     flex-direction: column;
@@ -32,23 +32,42 @@
     gap: 40px;
 }
 
-.screen-container > .scores {
+
+#start-screen {
+
+}
+
+/*
+.content
+    .player-card .player-1 .player-2
+        img
+        .form
+            label
+            input
+    .start-btn
+        button
+*/
+
+#start-screen > .content {
     display: flex;
-    gap: 60px;
 }
 
-.screen-container > .restart-text {
-    position: absolute;
+#start-screen > .content > .player-card {
+    width: 15vw;
 
-    top: calc(100vh / 3 * 2.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.screen-container > .credit {
-    position: absolute;
 
-    bottom: 4vh;
+#start-screen > .content > .player-card > img {
+    height: 15vh;
 }
 
-.credit > a {
-    cursor: pointer;
+
+#start-screen > .content > .player-card > .form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
 }

@@ -4,35 +4,94 @@
     <meta charset="UTF-8">
     <title>Tapping Game</title>
 
+    <link rel="stylesheet" href="styles/reset.css">
+
     <link rel="stylesheet" href="styles/globals.css">
     <link rel="stylesheet" href="styles/texts.css">
     <link rel="stylesheet" href="styles/noises.css">
 
     <link rel="stylesheet" href="styles/game.css">
     <link rel="stylesheet" href="styles/screen_container.css">
-
 </head>
 <body>
+
     <div class="noise">
         <div id="noise-lines"></div>
         <div id="noise-snow"></div>
     </div>
     <div class="app">
-        <div class="screen-container game bg" id="game-screen">
+        <div class="screen-container game bg" id="game-screen" style="display: none">
             <div class="hud">
-                <div class="test"></div>
+                <div class="health-bars">
+                    <div id="player-1-health-bar" class="health-bar">
+                        <svg width="60" height="60" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Exclude" fill-rule="evenodd" clip-rule="evenodd" d="M84 0H0V84H84V0ZM38 14H22V22H14V46H22V54H30V62H38V70H46V62H54V54H62V46H70V22H62V14H46V22H38V14Z" fill="#2555E7"/>
+                        </svg>
+
+                        <div class="bar-parent">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div id="player-2-health-bar" class="health-bar">
+                        <svg width="60" height="60" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Exclude" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H84V84H0V0ZM46 14H62V22H70V46H62V54H54V62H46V70H38V62H30V54H22V46H14V22H22V14H38V22H46V14Z" fill="#EE9027"/>
+                        </svg>
+
+                        <div class="bar-parent">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="players">
                 <div id="player-1" class="player">
                     <img src="assets/ships/ship_1.svg" alt="">
+                    <div class="munitions">
+<!--                        <div class="bullet bullet-1" style="transform: translateX(100px)"></div>-->
+                    </div>
                 </div>
                 <div id="player-2" class="player">
                     <img src="assets/ships/ship_2.svg" alt="">
+                    <div class="munitions">
+<!--                        <div class="bullet bullet-2" style="transform: translateX(-100px)"></div>-->
+                    </div>
                 </div>
             </div>
         </div>
         <div class="screens">
-            <div class="screen-container bg" id="start-screen" style="display: none">
+            <div class="screen-container bg" id="start-screen" style="display: flex">
+                <div class="title">
+                    <div class="text-3d title-text pink-text">
+                        <span>SPACE</span>
+                        <span>SPACE</span>
+                    </div>
+                    <div class="text-3d title-text green-text">
+                        <span>SHOOTER</span>
+                        <span>SHOOTER</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="player-card player-1">
+                        <img src="./assets/ships/ship_1_top.svg" alt="">
+                        <div class="form">
+                            <label for="pseudo-player-1">Player 1:</label>
+                            <input type="text" id="pseudo-player-1" name="pseudo-player-1" placeholder="pseudo...">
+                        </div>
+                    </div>
+                    <div class="start-button">
+                        <button id="start-btn">Start</button>
+                    </div>
+                    <div class="player-card player-2">
+                        <img src="./assets/ships/ship_2_top.svg" alt="">
+                        <div class="form">
+                            <label for="pseudo-player-2">Player 2:</label>
+                            <input type="text" id="pseudo-player-2" name="pseudo-player-2" placeholder="pseudo...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-container bg" id="end-screen" style="display: none">
                 <div class="title">
                     <div class="text-3d title-text pink-text">
                         <span>ALIEN</span>
