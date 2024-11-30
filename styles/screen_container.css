@@ -12,8 +12,6 @@
     flex-direction: column;
 
     align-items: center;
-
-    justify-content: center;
 }
 
 .screen-container, .screen-container * {
@@ -21,10 +19,7 @@
 }
 
 .screen-container > .title {
-    position: absolute;
-
-    top: 6vh;
-
+    margin-top: 9vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,9 +27,13 @@
     gap: 40px;
 }
 
+#game-screen {
+    justify-content: center
+}
 
 #start-screen {
-
+    justify-content: normal;
+    gap: 100px;
 }
 
 /*
@@ -50,24 +49,113 @@
 
 #start-screen > .content {
     display: flex;
+
+    gap: 250px;
+
+    opacity: 0.8;
+}
+
+#start-screen > .content > .start-btn {
+    display: flex;
+    align-items: center;
+}
+
+#start-screen > .content > .start-btn > button {
+    display: flex;
+    padding: 23px 51px;
+    justify-content: center;
+    align-items: center;
+
+    border: 4px solid #FFF;
+    box-shadow: 0 2px 44px 0 rgba(255, 255, 255, 0.70), 0 2px 20px 0 rgba(255, 255, 255, 0.60), inset 0 2px 34px 2px rgba(255, 255, 255, 0.70);
+    transition: box-shadow 60ms;
+
+    cursor: pointer;
+}
+
+#start-screen > .content > .start-btn > button:hover {
+    box-shadow: 0 2px 44px 0 rgba(255, 255, 255, 0.70), 0 2px 20px 0 rgba(255, 255, 255, 0.60), inset 0 2px 50px 2px rgba(255, 255, 255, 0.60);
 }
 
 #start-screen > .content > .player-card {
-    width: 15vw;
+    width: 250px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
 #start-screen > .content > .player-card > img {
     height: 15vh;
+
+    margin-bottom: 50px;
 }
 
+
+
+#start-screen > .content > .player-card > .form {
+    gap: 10px;
+}
+
+#start-screen > .content > .player-card > .form > * {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+
+
+}
+
+#start-screen > .content > .player-1 > .form > label  {
+    color: #2555E7;
+}
+
+#start-screen > .content > .player-2 > .form > label {
+    color: #EE9027;
+}
+
+#start-screen > .content > .player-card > .form > input::placeholder {
+    color: lightgrey;
+}
+
+#start-screen > .content > .player-card > .form > input:focus::placeholder {
+    opacity: 0;
+}
 
 #start-screen > .content > .player-card > .form {
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 100%;
+}
+
+#start-screen > .content > .player-card > .key-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    position: absolute;
+
+    bottom: 40px;
+}
+
+
+#start-screen > .content > .player-card > .key-info > .key {
+    display: flex;
+    width: 50px;
+    height: 45px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    border: 2px solid #FFF;
+    box-shadow: 0 2px 15px 0 rgba(255, 255, 255, 0.40), 0 2px 15px 0 rgba(255, 255, 255, 0.40), inset 0 0 20px 0 rgba(255, 255, 255, 0.40);
+
+    transition: box-shadow 60ms;
+}
+#start-screen > .content > .player-card > .key-info > .key.active, #start-screen > .content > .player-card > .key-info > .key:hover {
+    box-shadow: 0 2px 15px 0 rgba(255, 255, 255, 0.40), 0 2px 15px 0 rgba(255, 255, 255, 0.40), inset 0 0 20px 20px rgba(255, 255, 255, 0.40);
 }

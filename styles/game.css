@@ -92,6 +92,10 @@
     border-right: 5px solid #EE9027;
 }
 
+.health-bar > svg {
+    box-sizing: content-box;
+}
+
 .bar-parent {
     width: calc(300px - 65px);
     padding: 5px;
@@ -115,4 +119,13 @@
 
 .health-bar:nth-child(2) > .bar-parent > .progress-bar {
     background: #FCEB77;
+}
+
+.start-timer {
+    pointer-events: none;
+    position: absolute;
+
+}
+.timer-container {
+    font-size: 100px;
 }

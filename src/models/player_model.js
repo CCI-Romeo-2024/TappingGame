@@ -3,12 +3,13 @@ import { Hud } from './index.js';
 import { game } from '../game.js';
 
 class Player {
-    constructor(name, position) {
+    constructor(name, position, key) {
         this.position = position;
         this.name = name;
         this.health = 100;
         this.lastDamageTimeout = null;
         this.hud = new Hud(document.getElementById(`${this.getPlayerID}-health-bar`));
+        this.key = key
     }
 
     fire() {
