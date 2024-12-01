@@ -128,17 +128,54 @@
 }
 
 #start-screen > .content > .player-card > .key-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
     position: absolute;
-
     bottom: 40px;
 }
 
+/*
+player-card">
+<img src="./assets/ships/ship_2_top.svg" id="winner-ship-img" alt="">
+<div class="player-info" id="winner-name">
 
-#start-screen > .content > .player-card > .key-info > .key {
+*/
+
+#end-screen {
+    gap: 100px;
+}
+
+#end-screen > .content > .player-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+#end-screen > .content > .player-card > img {
+    height: 25vh;
+}
+
+#end-screen > .content > .player-card > .player-info {
+    font-size: 2em;
+}
+
+.keys {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    position: absolute;
+    bottom: 40px;
+}
+
+.key-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.key-info > .key {
     display: flex;
     width: 50px;
     height: 45px;
@@ -156,6 +193,7 @@
 
     transition: box-shadow 60ms;
 }
-#start-screen > .content > .player-card > .key-info > .key.active, #start-screen > .content > .player-card > .key-info > .key:hover {
+
+.key-info > .key.active, #start-screen > .content > .player-card > .key-info > .key:hover {
     box-shadow: 0 2px 15px 0 rgba(255, 255, 255, 0.40), 0 2px 15px 0 rgba(255, 255, 255, 0.40), inset 0 0 20px 20px rgba(255, 255, 255, 0.40);
 }

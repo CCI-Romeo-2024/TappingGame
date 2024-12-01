@@ -15,8 +15,7 @@
 }
 
 #noise-lines {
-
-    opacity: 0.1;
+    opacity: 0.15;
     background-image: url("../assets/noise/lines.png");
     background-color: gray;
     background-position: 0 0, 0 0;
@@ -30,7 +29,7 @@
 
 
 #noise-snow {
-    opacity: 0.1;
+    opacity: 0.2;
     background: url("../assets/noise/snow.gif") lightgray 50% / 80% repeat;
 
     mix-blend-mode: darken;

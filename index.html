@@ -45,23 +45,25 @@
             </div>
             <div class="players">
                 <div id="player-1" class="player">
-                    <img src="assets/ships/ship_1.svg" alt="">
+                    <div class="ship">
+                        <img src="assets/ships/ship_1.svg" alt="">
+                    </div>
+
                     <div class="munitions">
 <!--                        <div class="bullet bullet-1" style="transform: translateX(100px)"></div>-->
                     </div>
                 </div>
                 <div id="player-2" class="player">
-                    <img src="assets/ships/ship_2.svg" alt="">
+                    <div class="ship">
+                        <img src="assets/ships/ship_2.svg" alt="">
+                    </div>
+
                     <div class="munitions">
 <!--                        <div class="bullet bullet-2" style="transform: translateX(-100px)"></div>-->
                     </div>
                 </div>
             </div>
-            <div class="start-timer">
-                <div class="timer-container">
-                    3
-                </div>
-            </div>
+            <div class="start-timer"><div class="timer-container"></div></div>
         </div>
         <div class="screens">
             <div class="screen-container bg" id="start-screen" style="display: flex">
@@ -78,7 +80,7 @@
 
                 <div class="content">
                     <div class="player-card player-1">
-                        <img src="./assets/ships/ship_2_top.svg" alt="">
+                        <img src="./assets/ships/ship_1_top.svg" alt="">
                         <div class="form">
                             <label for="pseudo-player-1">Player 1:</label>
                             <input type="text" id="pseudo-player-1" value="Bastien" name="pseudo-player-1" autocomplete="off" placeholder="pseudo...">
@@ -94,7 +96,7 @@
                         <button id="start-btn">Start</button>
                     </div>
                     <div class="player-card player-2">
-                        <img src="./assets/ships/ship_1_top.svg" alt="">
+                        <img src="assets/ships/ship_2_top.svg" alt="">
                         <div class="form">
                             <label for="pseudo-player-2">Player 2:</label>
                             <input type="text" id="pseudo-player-2" value="Romeo" name="pseudo-player-2" autocomplete="off" placeholder="pseudo...">
@@ -110,24 +112,36 @@
             </div>
             <div class="screen-container bg" id="end-screen" style="display: none">
                 <div class="title">
-                    <div class="text-3d title-text pink-text">
-                        <span>ALIEN</span>
-                        <span>ALIEN</span>
-                    </div>
                     <div class="text-3d title-text green-text">
-                        <span>SHOOTER</span>
-                        <span>SHOOTER</span>
+                        <span>WINNER</span>
+                        <span>WINNER</span>
                     </div>
                 </div>
 
+                <div class="content">
+                    <div class="player-card">
+                        <img src="./assets/ships/ship_2_top.svg" id="winner-ship-img" alt="">
+                        <div class="player-info" id="winner-name">
+                            Bastien
+                        </div>
 
-                <div class="restart-text grey-text info-text uppercase">
-                    Click anywhere to start
+                        <div class="keys">
+                            <div class="key-info">
+                                <div class="key" id="key-r-switch">R</div>
+                                <div class="text-info">
+                                    to play again
+                                </div>
+                            </div>
+                            <div class="key-info">
+                                <div class="key" id="key-c-switch">C</div>
+                                <div class="text-info">
+                                    to change player
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="credit">
-                    by <a href="https://github.com/69Nesta">@69Nesta</a>
-                </div>
             </div>
         </div>
     </div>

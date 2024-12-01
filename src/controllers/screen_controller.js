@@ -1,11 +1,13 @@
 const EScreen = {
     start: 0,
-    game: 1
+    game: 1,
+    end: 2
 }
 
 const EScreenID = {
     start: 'start-screen',
-    game: 'game-screen'
+    game: 'game-screen',
+    end: 'end-screen'
 }
 
 

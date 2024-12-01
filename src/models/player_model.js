@@ -1,6 +1,8 @@
-import {debug, randInt} from '../lib/main.js'
+import { randInt } from '../lib/index.js'
 import { Hud } from './index.js';
 import { game } from '../game.js';
+import env from '../env.js'
+import {EAudio, playSound} from '../controllers/sound_controller.js';
 
 class Player {
     constructor(name, position, key) {
@@ -38,6 +40,8 @@ class Player {
 
         });
 
+        playSound(EAudio.fire)
+
     }
 
     newDamageTimeout() {
@@ -52,7 +56,6 @@ class Player {
 
     clearDamageTimeout() {
         if (!this.lastDamageTimeout) return
-        if (!game.canPlay) return
 
         clearTimeout(this.lastDamageTimeout)
         this.lastDamageTimeout = null;
@@ -71,7 +74,7 @@ class Player {
 
         //debug(this.getPlayerID, this.health)
 
-        this.hud.changeScore(this.health)
+        this.updateHUD()
     }
 
     removeHealth(value) {
@@ -82,8 +85,7 @@ class Player {
         if (previewNewHealth <= 0) {
             this.health = 0;
 
-            game.finishTheGame(this.position);
-
+            game.finishTheGame(this);
 
         } else {
             this.health -= value;
@@ -91,14 +93,18 @@ class Player {
 
         // debug(this.getPlayerID, this.health)
 
-        this.hud.changeScore(this.health)
+        this.updateHUD()
+    }
+
+    updateHUD() {
+        this.hud.changeScore(this.health);
     }
 
     newDamage() {
         this.clearDamageTimeout()
         this.newDamageTimeout()
 
-        this.removeHealth(1)
+        this.removeHealth(env.DEBUG ? 5 : 1)
     }
 
     get getPlayerID() {

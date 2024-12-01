@@ -14,7 +14,19 @@
     width: 15vh;
 }
 
-.player > img {
+.player > .ship {
+    position: absolute;
+    z-index: 2;
+}
+
+.player > .ship > img {
+    height: 15vh;
+    width: 15vh;
+
+    z-index: 2;
+}
+
+.player > .ship > video {
     position: absolute;
     height: 15vh;
     width: 15vh;
